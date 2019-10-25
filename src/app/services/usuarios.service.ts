@@ -15,24 +15,15 @@ export class UsuariosService {
     params = params.append('nombre', 'Paula Campos');
 
     // Enviar por header
-    const headers = new HttpHeaders({
-      'token-usuario': 'ABASD34634634346GSDFSD45'
-    });
+    // const headers = new HttpHeaders({
+    //   'token-usuario': 'ABASD34634634346GSDFSD45'
+    // });
 
-    return this.http.get('https://reqres7uu.in/api/user', {
-      params,
-      headers
+    return this.http.get('https://reqres123.in/api/user', {
+      params
+      // headers
     }).pipe(
-      map((res: any) => res['data']),
-
-      catchError(this.manejarError)
-      );
-  }
-
-  manejarError(error: HttpErrorResponse) {
-    console.log('sucedio un error');
-    console.log('Registro un log file');
-    console.warn(error);
-    return throwError('Error personalizado');
+      map((res: any) => res['data'])
+    );
   }
 }

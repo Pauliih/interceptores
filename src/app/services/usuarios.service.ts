@@ -19,7 +19,7 @@ export class UsuariosService {
     //   'token-usuario': 'ABASD34634634346GSDFSD45'
     // });
 
-    return this.http.get('https://reqres123.in/api/user', {
+    return this.http.get('https://reqres.in/api/user', {
       params
       // headers
     }).pipe(
